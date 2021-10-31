@@ -1,0 +1,97 @@
+ 
+ @font-face {
+   font-family: 'Open Sans', sans-serif;
+   src: url(../fonts/OpenSans-Variabl);
+}
+
+:root{
+    --maincolor:#04C7F7;
+    --scolor:#FFFFFF;
+    --imgbg:#2B4755;
+     --hcolor:#5C5C5C;
+     --bcolor:black;
+    --mainfont:'Open Sans', sans-serif;
+    --mainwidth:700px;
+    --icons:70px;
+    --iconsp:21px;
+
+   
+ }
+ 
+*{
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0 ;
+ 
+}
+ 
+ul{
+   list-style: none;
+}
+ html, body{
+    font-family: var(--mainfont);
+     scroll-behavior: smooth;
+  
+}
+
+.co{  
+   margin-left: auto;
+   margin-right: auto;
+  
+   padding: 11px;
+ 
+   width: var(--mainwidth);
+   
+
+
+     
+}
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+   .co {
+      width:auto ;
+      font-size: 14px;
+ 
+   }
+  
+
+
+ }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+   .co {
+      width:600px ;
+      font-size: 17px;
+
+   }
+  
+ }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   .co {
+      width:670px ;
+      font-size: 17px;
+   }
+  
+ }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+   .co {
+      width:920px ;
+      font-size: 17px;
+   }
+   
+ }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) { 
+   .co {
+      width:1000px ;
+      font-size:17px;
+   }
+}

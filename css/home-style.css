@@ -1,0 +1,585 @@
+@import url(./style.css);
+#specialh {
+  color: var(--hcolor);
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 70px;
+}
+#sh {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--bcolor);
+}
+#sd {
+  margin-top: -17px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--hcolor);
+  width: 130px;
+  height: 2px;
+  position: relative;
+}
+
+#sd::after {
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 11px;
+  background-color: white;
+  border: 1px solid var(--hcolor);
+  border-radius: 11px;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+header {
+  width: 100%;
+  z-index: 2;
+
+  position: absolute;
+
+  z-index: 2;
+}
+header .co {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  position: relative;
+}
+header .co .logo img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+header .co .logo {
+  padding: 20px 11px;
+}
+header .co .menu {
+  width: 500px;
+
+  margin-left: auto;
+}
+header .co .menu a {
+  margin-bottom: 0px;
+  display: inline-block;
+  color: var(--scolor);
+  padding: 20px 11px;
+  text-decoration: none;
+  border-bottom: 0px solid transparent;
+
+  transition: 0.5s;
+}
+header .co .menu a:active,
+header .co .menu a:hover {
+  color: var(--maincolor);
+  border-bottom: 2px solid var(--maincolor);
+}
+header .co .menu a:first-child {
+  border-bottom: 2px solid var(--maincolor);
+  color: var(--maincolor);
+}
+
+header .search i {
+  margin-left: 11px;
+  color: var(--scolor);
+  font-size: 15px;
+}
+header .search span {
+  display: inline-block;
+  background-color: var(--scolor);
+  width: 1px;
+  height: 30px;
+}
+header .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 11px;
+}
+
+header .co::after {
+  position: absolute;
+  content: "";
+  width: calc(100% - 40px);
+  border-bottom: 1px solid var(--scolor);
+  bottom: 6px;
+  left: 20px;
+  z-index: -1;
+}
+header .co .toggle-menu {
+  position: relative;
+  display: none;
+  margin-left: auto;
+  color: var(--scolor);
+  font-size: 15px;
+}
+
+header .co .toggle-menu:hover + .menu {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 700px) {
+  header .co .menu {
+    display: none;
+  }
+
+  header .co .toggle-menu {
+    display: block;
+    color: var(--scolor);
+  }
+  header .co .menu:hover {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    background-color: rgb(0, 0, 0);
+  }
+}
+/* landing styling */
+.landing {
+  background-color: black;
+  height: 110vh;
+  background-image: url(../images/cloud-computing-banner-background-smart-city.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 4s;
+ }
+.landing .co {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  position: relative;
+}
+.landing .co .text {
+  transition: 1.5s;
+  background-color: rgba(4, 199, 247, 60%);
+  position: absolute;
+  width: 50%;
+
+  opacity: 1;
+  padding: 50px;
+  padding-left: 7%;
+  left: -100%;
+
+  top: 40%;
+  color: var(--scolor);
+}
+.landing .co .circles {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.landing .co .circles span {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background-color: transparent;
+  border: 1px solid var(--scolor);
+  border-radius: 5px;
+}
+.landing .co .circles span.active {
+  background-color: var(--maincolor);
+}
+.landing .co .next {
+  position: absolute;
+  color: var(--scolor);
+  font-size: 35px;
+  top: 50%;
+  right: 30px;
+  z-index: 1;
+}
+.landing .co .prev {
+  position: absolute;
+  color: var(--scolor);
+  font-size: 35px;
+  top: 50%;
+  left: 30px;
+  z-index: 1;
+}
+@media (max-width: 600px) {
+  .landing .co .text {
+    width: 100%;
+    top: 30%;
+  }
+}
+/* styling Service */
+/* .services .co .specialh {
+ 
+  margin: auto;
+  text-align: center;
+  max-width: 500px;
+} */
+.services .co .service-content {
+  margin: 17px 0px;
+  display: grid;
+  gap: 11px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.services .co .service-content [class*="service-"] {
+  display: flex;
+}
+.services .co .service-content [class*="service-"] i {
+  font-size: var(--icons);
+  margin: 30px;
+  margin-right: 50px;
+}
+.services .co .service-content [class*="service-"] h1 {
+  color: var(--maincolor);
+}
+@media (max-width: 640px) {
+  .services .co .service-content [class*="service-"] {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .services .co .service-content [class*="service-"] .text {
+    text-align: center;
+  }
+}
+/* styling desgin section */
+
+.design{
+
+  background-image: url(../images/coding-man.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.design .co{
+  width: 100%;
+  background-color: rgba(0,0,0,.7);
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(500px,1fr)); */
+  position: relative;
+  height: 500px;
+ 
+
+}
+.design .co .image{
+  
+ position: absolute;
+ top:100px;
+ left: 50px;
+}
+.design .co .text{
+ padding: 50px 50px 50px 11px;
+ width: 50%;
+   position: absolute;
+  right: 0;
+  top: 20%;
+  color: var(--scolor);
+   background-color: rgba(4, 199, 247, 60%);
+}
+.design .co .text h2{
+  margin: 11px;
+}
+.design .co .text h1{
+  padding-top: 11px;
+  margin:3px  11px
+}
+@media (max-width:700px){
+  .design .co .image{
+    display: none;
+  }
+  .design .co .text{
+    width: 100%;
+  }
+}
+/* Portfoio Sytling */
+.portfolio .co .filter ul li{
+display: inline;
+padding: 11px;
+
+}
+.portfolio .co .filter ul .active{
+  background-color: var(--maincolor);
+}
+.portfolio .co .filter{
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.portfolio .co .galary .image{
+ flex-basis: 30%;
+ margin: 11px;
+ position: relative;
+ overflow: hidden;
+}
+.portfolio .co .galary .image img{
+   width: 100%;
+   transition: 0.3s;
+ 
+ }
+.portfolio .co .galary {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ 
+
+
+}
+.portfolio .co .galary .image .text h1{
+  margin: 3px 3px;
+  font-size: 17px;
+  color: var(--maincolor);
+ 
+}
+
+.portfolio .co .galary .image .text{
+ 
+
+ 
+  width: 100%;
+   position:  absolute;
+  bottom: -100px;
+  left: 0;
+  z-index: 1;
+  background-color: var(--scolor);
+  transition: 0.4s;
+}
+.portfolio .co  .galary  .image:hover .text{
+    bottom: 0px;
+ }
+.portfolio .co  .galary  .image:hover img{
+   border-left: 15px solid var(--maincolor); 
+   transform: rotate(3deg) scale(1.1);
+   
+}
+@media (max-width:640px){
+  .portfolio .co .galary .image{
+    flex-basis: 100%;
+  }
+}
+.portfolio .co a{
+  display: block;
+  margin: auto;
+  width: 7%;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  color: var(--scolor);
+  background-color: var(--maincolor);
+  border: none;
+}
+/* videos styling */
+
+.videos .co{
+  width: 100%;
+  padding: 0px;
+  position: relative;
+ 
+}
+.videos .co::after{
+
+content: "";
+background-color: rgba(0,0,0, .8);
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+color: blue;
+ position: absolute;
+
+}
+.videos .co video{
+  
+  width: 100%;
+  height: 100%;
+ 
+ 
+ 
+}
+ 
+.videos .co .text{
+  text-align: center;
+  background-color: rgba(4, 199, 247, 60%);
+  position: absolute;
+      
+     padding: 30px;
+    width: 100%;
+    color: var(--scolor);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+}
+
+.videos{
+  margin: 70px 0px;
+}
+.videos .co .text a{
+  display: block;
+  background-color: black;
+  padding: 5px 30px;
+  width: max-content;
+  margin: auto;
+  margin-top: 50px;
+  text-decoration: none;
+  color: var(--scolor);
+}
+/* About Us */
+.aboutus .co{
+  padding-bottom: 0px;
+}
+.aboutus .co .image{
+  margin-top: 70px;
+  text-align: center;
+  overflow: hidden;
+}
+.aboutus .co .image img{
+max-width: 70%;
+position: relative;
+bottom: -30px;
+margin-top: -30px;
+
+}
+/* statistics */
+.statistics{
+
+  background-image: url(../images/aerial-view-business-team.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  margin-top: 0;
+
+}
+.statistics::after{
+ content: '';
+  background-color: rgba(0,0,0,70%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+   top:0;
+   left: 0;
+   z-index: 0;
+ }
+ .statistics .co {
+   position: absolute;
+   
+   top:50%;
+   transform: translateY(-50%);
+   left: 0px;
+   right: 0px;
+     
+  z-index: 2;
+
+ }
+.statistics .co .stat{
+ 
+  padding: 30px 0px;
+  background-color:   rgba(4, 199, 247, 60%);
+  display: flex;
+  justify-content:  center;
+ 
+}
+.statistics .co .stat .st h1{
+  
+  font-size: 50px;
+}
+.statistics .co .stat .st h5{
+  font-size: 20px;
+}
+.statistics .co .stat .st{
+  color: white;
+  flex-basis: 25%;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+
+  
+}
+.statistics .co .stat .st .icon{
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:black;
+
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+
+
+}
+ 
+@media  (max-width:700px) {
+  .statistics .co .stat{
+  flex-direction: column;
+  }
+  .statistics .co .stat .st{
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%
+     
+  }
+}
+/* testmonails Skills */
+ 
+.tesk .co{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
+
+
+    
+}
+.tesk .co .test .test-co img{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 50px;
+  margin-top: 0px;
+  margin-left: 0;
+  
+}
+.tesk .co .test .test-co{
+  margin-top: 50px;
+}
+.tesk .co .test .test-co .ts{
+   
+  display:  flex;
+
+  
+}
+.tesk .co .test .test-co .ts .text{
+  flex-basis: 100%;
+ 
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid black;
+  padding-bottom: 7%;
+}
+.tesk .co .test .test-co .ts .text .speaker{
+ 
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+     color: var(--hcolor);
+}
