@@ -62,7 +62,7 @@ ul{
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
    .co {
-      width:600px ;
+      width:570px ;
       font-size: 17px;
 
    }
@@ -81,7 +81,7 @@ ul{
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
    .co {
-      width:920px ;
+      width:950px ;
       font-size: 17px;
    }
    
@@ -90,7 +90,7 @@ ul{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) { 
    .co {
-      width:1000px ;
+      width:1100px ;
       font-size:17px;
    }
 }
